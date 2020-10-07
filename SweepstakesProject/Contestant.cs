@@ -8,19 +8,18 @@ namespace SweepstakesProject
 {
     class Contestant
     {
-        string firstName;
-        string lastname;
-        string emailAddress;
-        int registrationNumber;
+        public string FirstName;
+        public string LastName;
+        public string EmailAddress;
+        public int RegistrationNumber;
 
-        public Contestant(string firstName, string lastName, string emailAddress, int )
+        public Contestant(string firstName, string lastName, string emailAddress, int registrationNumber)
         {
-            this.firstName = firstName;
-
+          FirstName = firstName;
+          LastName = lastName;
+          EmailAddress = emailAddress;
+          RegistrationNumber = registrationNumber;
         }
-
-
-
 
     }
 }
