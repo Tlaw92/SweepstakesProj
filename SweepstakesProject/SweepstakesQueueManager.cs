@@ -12,12 +12,18 @@ namespace SweepstakesProject
         private Queue<Sweepstakes> queue;
 
         //constructor
+        public SweepstakesQueueManager()
+        {
+            queue = new Queue<Sweepstakes>();
+        }
 
         //methods
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-
+            queue.Enqueue(sweepstakes);
         }
+
+
         //public Sweepstakes GetSweepstakes()
         //{
 

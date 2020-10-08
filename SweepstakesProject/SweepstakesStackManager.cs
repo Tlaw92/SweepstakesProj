@@ -10,12 +10,18 @@ namespace SweepstakesProject
     {
         //variables
         private Stack<Sweepstakes> stack;
+
         //constructor
+        public SweepstakesStackManager()
+        {
+            stack = new Stack<Sweepstakes>();
+        }
 
         //methods
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-
+            stack.Push(sweepstakes);
+            
         }
         //public Sweepstakes GetSweepstakes()
         //{

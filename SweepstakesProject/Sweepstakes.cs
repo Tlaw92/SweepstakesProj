@@ -12,6 +12,7 @@ namespace SweepstakesProject
         private Dictionary<int, Contestant> contestants;
         private string name;
         public string Name;
+        public Contestant winnerContest;
 
         //constructor
         public Sweepstakes(string name)
@@ -37,16 +38,22 @@ namespace SweepstakesProject
                 $" {contestant.EmailAddress}" +
                 $" registration number: {contestant.RegistrationNumber} ");  //Send this to user interface dude
 
-       }
+        }
 
 
-        //public Contestant PickWinner()
-        //{
-        //    //return;
-        //}
-
-
-
+        public Contestant PickWinner()
+        {
+            int winningNumber = GetRandomNumber(contestants.Count + 1);
+            foreach (KeyValuePair<int, Contestant> player in contestants)
+            {
+                if (winningNumber == player.Key)
+                {
+                    winnerContest = player.Value;
+                }
+                
+            }
+            return winnerContest;
+        }
 
         public void PrintContestantInfo(Contestant contestant)
         {
@@ -64,6 +71,14 @@ namespace SweepstakesProject
         }
 
 
+
+        //sweepstakes1 = new Sweepstakes("October Sweep");
+        //contestant1 = new Contestant("Jim", "Baron", "JimBaron@gmail.com", sweepstakes1.GetRandomNumber(50));
+        //contestant2 = new Contestant("Tim", "Burton", "TimBurton@gmail.com", sweepstakes1.GetRandomNumber(50));
+
+        //sweepstakes1.RegisterContestant(contestant1);
+        //sweepstakes1.RegisterContestant(contestant2);
+        //Console.ReadLine();
 
     }
 }

@@ -10,9 +10,7 @@ namespace SweepstakesProject
     {
 
         //variables
-        public Contestant contestant1;
-        public Contestant contestant2;
-        public Sweepstakes sweepstakes1;
+        
 
         //Constructor
         public Simulation()
@@ -22,15 +20,10 @@ namespace SweepstakesProject
 
 
         //Methods
-        public void RunMain()
-        {
-            sweepstakes1 = new Sweepstakes("October Sweep");
-            contestant1 = new Contestant("Jim", "Baron", "JimBaron@gmail.com", sweepstakes1.GetRandomNumber(50));
-            contestant2 = new Contestant("Tim", "Burton", "TimBurton@gmail.com", sweepstakes1.GetRandomNumber(50));
 
-            sweepstakes1.RegisterContestant(contestant1);
-            sweepstakes1.RegisterContestant(contestant2);
-            Console.ReadLine();
+        public void CreateMarketingFirmWithManager(ISweepstakesManager manager)
+        {
+            MarketingFirm marketingFirm1 = new MarketingFirm(manager);
         }
 
     }

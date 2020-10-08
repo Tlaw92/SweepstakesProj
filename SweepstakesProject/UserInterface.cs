@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepstakesProject
 {
-    class UserInterface
+    static class UserInterface
     {
         //This will be for all the user input and output. (Console.Write/Read Lines)
 
